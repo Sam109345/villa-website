@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  
 
   <title>Villa Website Design</title>
 
@@ -585,15 +586,31 @@
     </div>
   </div>
 
-  <footer>
-    <div class="container">
+<!-- Footer Start -->
+<footer>
+  <div class="container">
       <div class="col-lg-8">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
-
-          Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+          <p>
+              &copy; <span id="current-year"></span> <span id="site-title"></span> 
+              All rights reserved | Designed by 
+              <a href="http://oceandesignpro.com" target="_blank" rel="noopener"><b>OCEAN DESIGN PRO.</b></a>
+          </p>
       </div>
-    </div>
-  </footer>
+  </div>
+</footer>
+
+<script>
+  // Set your site title dynamically if it's not available elsewhere
+  var siteTitle = document.title || "Your Site Name"; // Fallback if site name is not set in title
+  var currentYear = new Date().getFullYear();
+
+  // Insert the dynamic values into the respective spans
+  document.getElementById("site-title").textContent = siteTitle;
+  document.getElementById("current-year").textContent = currentYear;
+</script>
+
+<!-- Footer End -->
+
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
